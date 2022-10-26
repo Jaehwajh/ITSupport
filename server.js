@@ -8,6 +8,7 @@ const methodOverride = require("method-override");
 const flash = require("express-flash");
 const logger = require("morgan");
 const connectDB = require("./config/database");
+const mainRoutes = require("./routes/main");
 
 
 //.env config
@@ -51,6 +52,9 @@ app.use(passport.session());
 
 // Flash messages
 app.use(flash());
+
+// Route Setup
+app.use("/", mainRoutes);
 
 
 // Server uptime
