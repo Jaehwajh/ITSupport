@@ -9,7 +9,7 @@ const flash = require("express-flash");
 const logger = require("morgan");
 const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
-
+const dashboardRoutes = require("./routes/dashboard")
 
 //.env config
 require("dotenv").config({ path: "./config/.env"});
@@ -55,6 +55,7 @@ app.use(flash());
 
 // Route Setup
 app.use("/", mainRoutes);
+app.use("/dashboard", dashboardRoutes);
 
 
 // Server uptime
