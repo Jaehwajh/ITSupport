@@ -1,34 +1,79 @@
 <%- include('partials/header') -%> 
-
-<div class="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
-    <div class="flex flex-col lg:flex-row justify-between gap-8">
-        <div class="w-full lg:w-5/12 flex flex-col justify-center">
-            <h1 class="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 dark:text-white pb-4">About Me</h1>
-            <p class="font-normal text-base leading-6 text-gray-600 dark:text-white">
-                A Full Stack software engineer trying to build web applications that can help better people's lives.
-            </p>
+<nav class="bg-gray-800">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile menu button-->
+          <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <!--
+              Icon when menu is closed.
+  
+              Heroicon name: outline/bars-3
+  
+              Menu open: "hidden", Menu closed: "block"
+            -->
+            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <!--
+              Icon when menu is open.
+  
+              Heroicon name: outline/x-mark
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
         </div>
-        <div class="w-full lg:w-8/12">
-            <img class="w-full h-full" src="https://i.ibb.co/FhgPJt8/Rectangle-116.png" alt="A group of People" />
-        </div>
-    </div>
-
-    <div class="flex lg:flex-row flex-col justify-between gap-8 pt-12">
-        <div class="w-full lg:w-5/12 flex flex-col justify-center">
-            <h1 class="text-3xl lg:text-4xl font-bold leading-9 text-gray-800 dark:text-white pb-4">My Story</h1>
-            <p class="font-normal text-base leading-6 text-gray-600 dark:text-white">
-                As a former IT Technician for a small business, I valued the interactions that I had with my clients. My job there was not only assisting them with the devices, but also teaching them and explaining to them
-                why there problem occurred. For me, it was never about earning the most money for this small business, but rather building a connection and making sure that the clients were satisfied with our work for the price.
-            </p>
-        </div>
-        <div class="w-full lg:w-8/12 lg:pt-8">
-            <div class="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-4 shadow-lg rounded-md">
-                <div class="p-4 pb-6 flex justify-center flex-col items-center">
-                    <img class="md:block hidden" src="https://i.ibb.co/FYTKDG6/Rectangle-118-2.png" alt="Alexa featured Image" />
-                    <img class="md:hidden block" src="https://i.ibb.co/zHjXqg4/Rectangle-118.png" alt="Alexa featured Image" />
-                    <p class="font-medium text-xl leading-5 text-gray-800 dark:text-white mt-4">James</p>
-                </div>
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex flex-shrink-0 items-center">
+            <img class="block h-8 w-auto lg:hidden" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+            <img class="hidden h-8 w-auto lg:block" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+          </div>
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-4">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              <a href="/" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Homepage</a>
+  
+              <a href="/features" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Feature</a>
+  
+              <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Sign in</a>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden" id="mobile-menu">
+      <div class="space-y-1 px-2 pt-2 pb-3">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        <a href="/" class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Homepage</a>
+  
+        <a href="/features" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Feature</a>
+  
+        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Sign In</a>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="py-16 bg-white">  
+    <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+        <div class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
+          <div class="md:5/12 lg:w-5/12">
+            <img class="w-10/12 h-10/12 rounded-xl" src="https://media-exp1.licdn.com/dms/image/C5603AQF_LfOD5Xzjtw/profile-displayphoto-shrink_800_800/0/1652233099406?e=1673481600&v=beta&t=D5BrFMdRuAa95pouOe-Qi1QE9mX-narlnshaa4x2_As" alt="image" loading="lazy" width="" height="">
+          </div>
+          <div class="md:7/12 lg:w-6/12">
+            <h2 class="text-2xl text-gray-900 font-bold md:text-4xl">A Full Stack software engineer trying to build web applications that can help better people's lives.</h2>
+            <p class="mt-6 text-gray-600">As a former IT Technician for a small business, I valued the interactions that I had with my clients. My job there was not only assisting them with the devices, but also teaching them and explaining to them
+                why there problem occurred.</p>
+
+            <p class="mt-4 text-gray-600">For me, it was never about earning the most money for this small business, but rather building a connection and making sure that the clients were satisfied with our work for the price.</p>
+          </div>
         </div>
     </div>
-</div>
+  </div>
