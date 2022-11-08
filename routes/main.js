@@ -5,6 +5,7 @@ const homepageController = require("../controllers/homepage");
 const dashboardController = require("../controllers/dashboard");
 const featureController = require("../controllers/features");
 const aboutController = require("../controllers/about");
+const communityController = require("../controllers/communitypage")
 const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
 // Homepage rendering
@@ -27,6 +28,9 @@ router.get("/features", featureController.getFeature);
 
 // About Page
 router.get("/about", aboutController.getAbout);
+
+// Community Page 
+router.get("/community", communityController.getCommunity);
 
 
 module.exports = router;
